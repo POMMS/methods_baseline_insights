@@ -1,0 +1,271 @@
+	sample	cohort	coord	value	readable_coord
+1	101T1	HWC	n26	0.0239624082702189	Order_Bacteroidales/Genus_Parabacteroides
+2	104T1	HWC	n26	0.263751377134696	Order_Bacteroidales/Genus_Parabacteroides
+3	106T1	HWC	n26	-0.0775824057660717	Order_Bacteroidales/Genus_Parabacteroides
+4	107T1	HWC	n26	0.173066471039647	Order_Bacteroidales/Genus_Parabacteroides
+5	109T1	HWC	n26	-0.0569881509373373	Order_Bacteroidales/Genus_Parabacteroides
+6	111T1	HWC	n26	-0.290940425182736	Order_Bacteroidales/Genus_Parabacteroides
+7	116T1	HWC	n26	0.0403113772608191	Order_Bacteroidales/Genus_Parabacteroides
+8	11T1	OB	n26	-0.273856323282948	Order_Bacteroidales/Genus_Parabacteroides
+9	120T1	HWC	n26	0.0576556753444573	Order_Bacteroidales/Genus_Parabacteroides
+10	127T1	HWC	n26	0.0542045384337665	Order_Bacteroidales/Genus_Parabacteroides
+11	134T1	HWC	n26	0.0589774211610801	Order_Bacteroidales/Genus_Parabacteroides
+12	13T1	OB	n26	-0.34689236341225	Order_Bacteroidales/Genus_Parabacteroides
+13	16T1	OB	n26	-0.0775824057660717	Order_Bacteroidales/Genus_Parabacteroides
+14	1T1	OB	n26	-0.0775824057660717	Order_Bacteroidales/Genus_Parabacteroides
+15	21T1	OB	n26	-0.381722582361963	Order_Bacteroidales/Genus_Parabacteroides
+16	22T1	OB	n26	-0.0775824057660717	Order_Bacteroidales/Genus_Parabacteroides
+17	23T1	OB	n26	0.0521287828874004	Order_Bacteroidales/Genus_Parabacteroides
+18	24T1	OB	n26	-0.0775824057660717	Order_Bacteroidales/Genus_Parabacteroides
+19	27T1	OB	n26	0.0365891035282449	Order_Bacteroidales/Genus_Parabacteroides
+20	28T1	OB	n26	-0.312175400745861	Order_Bacteroidales/Genus_Parabacteroides
+21	33T1	OB	n26	0.0770010150643901	Order_Bacteroidales/Genus_Parabacteroides
+22	37T1	OB	n26	0.179361476113495	Order_Bacteroidales/Genus_Parabacteroides
+23	38T1	OB	n26	-0.0775824057660717	Order_Bacteroidales/Genus_Parabacteroides
+24	39T1	OB	n26	-0.0775824057660717	Order_Bacteroidales/Genus_Parabacteroides
+25	40T1	OB	n26	-0.564031360255787	Order_Bacteroidales/Genus_Parabacteroides
+26	43T1	OB	n26	-0.0532337355754024	Order_Bacteroidales/Genus_Parabacteroides
+27	50T1	OB	n26	0.00796707230271031	Order_Bacteroidales/Genus_Parabacteroides
+28	51T1	OB	n26	0.105789266578125	Order_Bacteroidales/Genus_Parabacteroides
+29	52T1	OB	n26	-0.247893543893602	Order_Bacteroidales/Genus_Parabacteroides
+30	53T1	OB	n26	0.0847658411912896	Order_Bacteroidales/Genus_Parabacteroides
+31	54T1	OB	n26	-0.0775824057660717	Order_Bacteroidales/Genus_Parabacteroides
+32	5T1	OB	n26	-0.0775824057660717	Order_Bacteroidales/Genus_Parabacteroides
+33	63T1	HWC	n26	0.111723192123836	Order_Bacteroidales/Genus_Parabacteroides
+34	66T1	HWC	n26	0.221508097180509	Order_Bacteroidales/Genus_Parabacteroides
+35	67T1	HWC	n26	-0.0775824057660717	Order_Bacteroidales/Genus_Parabacteroides
+36	68T1	HWC	n26	-0.0310813701541496	Order_Bacteroidales/Genus_Parabacteroides
+37	69T1	HWC	n26	0.0723746382579435	Order_Bacteroidales/Genus_Parabacteroides
+38	72T1	HWC	n26	0.213065827466367	Order_Bacteroidales/Genus_Parabacteroides
+39	73T1	HWC	n26	0.0829197338864232	Order_Bacteroidales/Genus_Parabacteroides
+40	74T1	HWC	n26	0.11361170742938	Order_Bacteroidales/Genus_Parabacteroides
+41	76T1	HWC	n26	0.173290550848937	Order_Bacteroidales/Genus_Parabacteroides
+42	83T1	HWC	n26	0.162787858203258	Order_Bacteroidales/Genus_Parabacteroides
+43	84T1	HWC	n26	0.107437196463408	Order_Bacteroidales/Genus_Parabacteroides
+44	85T1	OB	n26	-0.0775824057660717	Order_Bacteroidales/Genus_Parabacteroides
+45	88T1	HWC	n26	0.263047611455905	Order_Bacteroidales/Genus_Parabacteroides
+46	89T1	HWC	n26	0.182331110577957	Order_Bacteroidales/Genus_Parabacteroides
+47	90T1	HWC	n26	-0.245412662442916	Order_Bacteroidales/Genus_Parabacteroides
+48	91T1	OB	n26	-0.0775824057660717	Order_Bacteroidales/Genus_Parabacteroides
+49	92T1	HWC	n26	-0.323811508407313	Order_Bacteroidales/Genus_Parabacteroides
+50	93T1	HWC	n26	-0.472615340119858	Order_Bacteroidales/Genus_Parabacteroides
+51	94T1	HWC	n26	0.360424459542628	Order_Bacteroidales/Genus_Parabacteroides
+52	97T1	HWC	n26	-0.0290418555272232	Order_Bacteroidales/Genus_Parabacteroides
+53	98T1	HWC	n26	0.0888170660252228	Order_Bacteroidales/Genus_Parabacteroides
+54	9T1	OB	n26	0.0693961419789069	Order_Bacteroidales/Genus_Parabacteroides
+55	101T1	HWC	n151	-0.813661958677393	Species_uncultured bacterium/Species_uncultured bacterium
+56	104T1	HWC	n151	-0.551475844209045	Species_uncultured bacterium/Species_uncultured bacterium
+57	106T1	HWC	n151	-0.870336312040841	Species_uncultured bacterium/Species_uncultured bacterium
+58	107T1	HWC	n151	0.138104277851678	Species_uncultured bacterium/Species_uncultured bacterium
+59	109T1	HWC	n151	0.138104277851677	Species_uncultured bacterium/Species_uncultured bacterium
+60	111T1	HWC	n151	0.138104277851678	Species_uncultured bacterium/Species_uncultured bacterium
+61	116T1	HWC	n151	-0.12408183661667	Species_uncultured bacterium/Species_uncultured bacterium
+62	11T1	OB	n151	0.138104277851678	Species_uncultured bacterium/Species_uncultured bacterium
+63	120T1	HWC	n151	0.138104277851678	Species_uncultured bacterium/Species_uncultured bacterium
+64	127T1	HWC	n151	-1.09789340217315	Species_uncultured bacterium/Species_uncultured bacterium
+65	134T1	HWC	n151	-0.652242832888538	Species_uncultured bacterium/Species_uncultured bacterium
+66	13T1	OB	n151	0.138104277851678	Species_uncultured bacterium/Species_uncultured bacterium
+67	16T1	OB	n151	-1.0880734784303	Species_uncultured bacterium/Species_uncultured bacterium
+68	1T1	OB	n151	0.986597395245192	Species_uncultured bacterium/Species_uncultured bacterium
+69	21T1	OB	n151	0.138104277851678	Species_uncultured bacterium/Species_uncultured bacterium
+70	22T1	OB	n151	0.138104277851678	Species_uncultured bacterium/Species_uncultured bacterium
+71	23T1	OB	n151	0.138104277851678	Species_uncultured bacterium/Species_uncultured bacterium
+72	24T1	OB	n151	0.138104277851678	Species_uncultured bacterium/Species_uncultured bacterium
+73	27T1	OB	n151	-0.398493356369579	Species_uncultured bacterium/Species_uncultured bacterium
+74	28T1	OB	n151	-0.787603718246782	Species_uncultured bacterium/Species_uncultured bacterium
+75	33T1	OB	n151	0.138104277851678	Species_uncultured bacterium/Species_uncultured bacterium
+76	37T1	OB	n151	0.138104277851678	Species_uncultured bacterium/Species_uncultured bacterium
+77	38T1	OB	n151	0.138104277851678	Species_uncultured bacterium/Species_uncultured bacterium
+78	39T1	OB	n151	-0.163030256948515	Species_uncultured bacterium/Species_uncultured bacterium
+79	40T1	OB	n151	0.138104277851678	Species_uncultured bacterium/Species_uncultured bacterium
+80	43T1	OB	n151	0.138104277851678	Species_uncultured bacterium/Species_uncultured bacterium
+81	50T1	OB	n151	0.138104277851678	Species_uncultured bacterium/Species_uncultured bacterium
+82	51T1	OB	n151	0.138104277851678	Species_uncultured bacterium/Species_uncultured bacterium
+83	52T1	OB	n151	-0.859827134042445	Species_uncultured bacterium/Species_uncultured bacterium
+84	53T1	OB	n151	0.138104277851678	Species_uncultured bacterium/Species_uncultured bacterium
+85	54T1	OB	n151	-0.727506689436929	Species_uncultured bacterium/Species_uncultured bacterium
+86	5T1	OB	n151	0.138104277851678	Species_uncultured bacterium/Species_uncultured bacterium
+87	63T1	HWC	n151	-0.813661958677393	Species_uncultured bacterium/Species_uncultured bacterium
+88	66T1	HWC	n151	0.138104277851678	Species_uncultured bacterium/Species_uncultured bacterium
+89	67T1	HWC	n151	-1.37230492192606	Species_uncultured bacterium/Species_uncultured bacterium
+90	68T1	HWC	n151	0.138104277851678	Species_uncultured bacterium/Species_uncultured bacterium
+91	69T1	HWC	n151	-0.727506689436929	Species_uncultured bacterium/Species_uncultured bacterium
+92	72T1	HWC	n151	-1.05092208677399	Species_uncultured bacterium/Species_uncultured bacterium
+93	73T1	HWC	n151	-1.0930236876937	Species_uncultured bacterium/Species_uncultured bacterium
+94	74T1	HWC	n151	-0.837633216154708	Species_uncultured bacterium/Species_uncultured bacterium
+95	76T1	HWC	n151	0.138104277851678	Species_uncultured bacterium/Species_uncultured bacterium
+96	83T1	HWC	n151	0.796130943986378	Species_uncultured bacterium/Species_uncultured bacterium
+97	84T1	HWC	n151	-0.696876133599803	Species_uncultured bacterium/Species_uncultured bacterium
+98	85T1	OB	n151	1.56683292534525	Species_uncultured bacterium/Species_uncultured bacterium
+99	88T1	HWC	n151	0.138104277851678	Species_uncultured bacterium/Species_uncultured bacterium
+100	89T1	HWC	n151	0.138104277851678	Species_uncultured bacterium/Species_uncultured bacterium
+101	90T1	HWC	n151	-0.470270784231976	Species_uncultured bacterium/Species_uncultured bacterium
+102	91T1	OB	n151	0.882286213226842	Species_uncultured bacterium/Species_uncultured bacterium
+103	92T1	HWC	n151	0.138104277851678	Species_uncultured bacterium/Species_uncultured bacterium
+104	93T1	HWC	n151	-0.29959229797454	Species_uncultured bacterium/Species_uncultured bacterium
+105	94T1	HWC	n151	-0.951283087532869	Species_uncultured bacterium/Species_uncultured bacterium
+106	97T1	HWC	n151	-0.800916169522818	Species_uncultured bacterium/Species_uncultured bacterium
+107	98T1	HWC	n151	-0.825887363961954	Species_uncultured bacterium/Species_uncultured bacterium
+108	9T1	OB	n151	-0.710388839541837	Species_uncultured bacterium/Species_uncultured bacterium
+109	101T1	HWC	n184	-0.384917570167797	Species_human gut metagenome/Family_Lachnospiraceae
+110	104T1	HWC	n184	-0.169380661967571	Species_human gut metagenome/Family_Lachnospiraceae
+111	106T1	HWC	n184	-0.347635196797761	Species_human gut metagenome/Family_Lachnospiraceae
+112	107T1	HWC	n184	-0.321404340001911	Species_human gut metagenome/Family_Lachnospiraceae
+113	109T1	HWC	n184	0.3249722228581	Species_human gut metagenome/Family_Lachnospiraceae
+114	111T1	HWC	n184	-0.0160717108291315	Species_human gut metagenome/Family_Lachnospiraceae
+115	116T1	HWC	n184	-0.149062085055009	Species_human gut metagenome/Family_Lachnospiraceae
+116	11T1	OB	n184	-0.0697011586992604	Species_human gut metagenome/Family_Lachnospiraceae
+117	120T1	HWC	n184	-0.23314705348908	Species_human gut metagenome/Family_Lachnospiraceae
+118	127T1	HWC	n184	-0.0189603794755364	Species_human gut metagenome/Family_Lachnospiraceae
+119	134T1	HWC	n184	0.342155319431538	Species_human gut metagenome/Family_Lachnospiraceae
+120	13T1	OB	n184	-0.0773410524350747	Species_human gut metagenome/Family_Lachnospiraceae
+121	16T1	OB	n184	0.205871936997524	Species_human gut metagenome/Family_Lachnospiraceae
+122	1T1	OB	n184	0.55543621817808	Species_human gut metagenome/Family_Lachnospiraceae
+123	21T1	OB	n184	0.286503136279591	Species_human gut metagenome/Family_Lachnospiraceae
+124	22T1	OB	n184	0.254454532473353	Species_human gut metagenome/Family_Lachnospiraceae
+125	23T1	OB	n184	0.572079295049237	Species_human gut metagenome/Family_Lachnospiraceae
+126	24T1	OB	n184	0.508778761421522	Species_human gut metagenome/Family_Lachnospiraceae
+127	27T1	OB	n184	0.544516647026696	Species_human gut metagenome/Family_Lachnospiraceae
+128	28T1	OB	n184	-0.252099151784293	Species_human gut metagenome/Family_Lachnospiraceae
+129	33T1	OB	n184	0.560030752121886	Species_human gut metagenome/Family_Lachnospiraceae
+130	37T1	OB	n184	0.427381799522621	Species_human gut metagenome/Family_Lachnospiraceae
+131	38T1	OB	n184	-0.154621962365104	Species_human gut metagenome/Family_Lachnospiraceae
+132	39T1	OB	n184	0.259422489286726	Species_human gut metagenome/Family_Lachnospiraceae
+133	40T1	OB	n184	-0.00931152030693695	Species_human gut metagenome/Family_Lachnospiraceae
+134	43T1	OB	n184	-0.0956185283830435	Species_human gut metagenome/Family_Lachnospiraceae
+135	50T1	OB	n184	-0.080295607261756	Species_human gut metagenome/Family_Lachnospiraceae
+136	51T1	OB	n184	0.331154485196699	Species_human gut metagenome/Family_Lachnospiraceae
+137	52T1	OB	n184	0.39199867316731	Species_human gut metagenome/Family_Lachnospiraceae
+138	53T1	OB	n184	-0.139627489538215	Species_human gut metagenome/Family_Lachnospiraceae
+139	54T1	OB	n184	-0.47133826860324	Species_human gut metagenome/Family_Lachnospiraceae
+140	5T1	OB	n184	0.0452286964966195	Species_human gut metagenome/Family_Lachnospiraceae
+141	63T1	HWC	n184	0.313328787283814	Species_human gut metagenome/Family_Lachnospiraceae
+142	66T1	HWC	n184	0.201819914569667	Species_human gut metagenome/Family_Lachnospiraceae
+143	67T1	HWC	n184	-0.037898593233417	Species_human gut metagenome/Family_Lachnospiraceae
+144	68T1	HWC	n184	-0.509507587013579	Species_human gut metagenome/Family_Lachnospiraceae
+145	69T1	HWC	n184	-0.242250385542029	Species_human gut metagenome/Family_Lachnospiraceae
+146	72T1	HWC	n184	-0.417328277639511	Species_human gut metagenome/Family_Lachnospiraceae
+147	73T1	HWC	n184	-0.643112792857883	Species_human gut metagenome/Family_Lachnospiraceae
+148	74T1	HWC	n184	-0.193538128422502	Species_human gut metagenome/Family_Lachnospiraceae
+149	76T1	HWC	n184	-0.182867347106962	Species_human gut metagenome/Family_Lachnospiraceae
+150	83T1	HWC	n184	-0.12350275734001	Species_human gut metagenome/Family_Lachnospiraceae
+151	84T1	HWC	n184	-0.195283988625455	Species_human gut metagenome/Family_Lachnospiraceae
+152	85T1	OB	n184	-0.529388793499536	Species_human gut metagenome/Family_Lachnospiraceae
+153	88T1	HWC	n184	-0.120896219089003	Species_human gut metagenome/Family_Lachnospiraceae
+154	89T1	HWC	n184	-0.255859109724519	Species_human gut metagenome/Family_Lachnospiraceae
+155	90T1	HWC	n184	-0.0496841452119749	Species_human gut metagenome/Family_Lachnospiraceae
+156	91T1	OB	n184	0.313308163970213	Species_human gut metagenome/Family_Lachnospiraceae
+157	92T1	HWC	n184	0.083262453883005	Species_human gut metagenome/Family_Lachnospiraceae
+158	93T1	HWC	n184	-0.383950563014347	Species_human gut metagenome/Family_Lachnospiraceae
+159	94T1	HWC	n184	-0.4338162010366	Species_human gut metagenome/Family_Lachnospiraceae
+160	97T1	HWC	n184	-0.182867347106962	Species_human gut metagenome/Family_Lachnospiraceae
+161	98T1	HWC	n184	-0.315651526321319	Species_human gut metagenome/Family_Lachnospiraceae
+162	9T1	OB	n184	-0.211922424040741	Species_human gut metagenome/Family_Lachnospiraceae
+163	101T1	HWC	n185	0.170631810117668	Family_Lachnospiraceae/Genus_[Ruminococcus] gnavus group
+164	104T1	HWC	n185	0.702772182626252	Family_Lachnospiraceae/Genus_[Ruminococcus] gnavus group
+165	106T1	HWC	n185	0.966158122162467	Family_Lachnospiraceae/Genus_[Ruminococcus] gnavus group
+166	107T1	HWC	n185	0.927399843902694	Family_Lachnospiraceae/Genus_[Ruminococcus] gnavus group
+167	109T1	HWC	n185	0.661321789322663	Family_Lachnospiraceae/Genus_[Ruminococcus] gnavus group
+168	111T1	HWC	n185	0.476245423161895	Family_Lachnospiraceae/Genus_[Ruminococcus] gnavus group
+169	116T1	HWC	n185	0.672749790908409	Family_Lachnospiraceae/Genus_[Ruminococcus] gnavus group
+170	11T1	OB	n185	0.555487404453077	Family_Lachnospiraceae/Genus_[Ruminococcus] gnavus group
+171	120T1	HWC	n185	0.796992343463822	Family_Lachnospiraceae/Genus_[Ruminococcus] gnavus group
+172	127T1	HWC	n185	1.08166572110631	Family_Lachnospiraceae/Genus_[Ruminococcus] gnavus group
+173	134T1	HWC	n185	0.701544752714945	Family_Lachnospiraceae/Genus_[Ruminococcus] gnavus group
+174	13T1	OB	n185	0.566775984524721	Family_Lachnospiraceae/Genus_[Ruminococcus] gnavus group
+175	16T1	OB	n185	-0.36835867378304	Family_Lachnospiraceae/Genus_[Ruminococcus] gnavus group
+176	1T1	OB	n185	-1.64100717692868	Family_Lachnospiraceae/Genus_[Ruminococcus] gnavus group
+177	21T1	OB	n185	0.718163072610254	Family_Lachnospiraceae/Genus_[Ruminococcus] gnavus group
+178	22T1	OB	n185	-0.4315120784912	Family_Lachnospiraceae/Genus_[Ruminococcus] gnavus group
+179	23T1	OB	n185	-1.63384988346054	Family_Lachnospiraceae/Genus_[Ruminococcus] gnavus group
+180	24T1	OB	n185	-2.53062543766917	Family_Lachnospiraceae/Genus_[Ruminococcus] gnavus group
+181	27T1	OB	n185	-2.0243285656979	Family_Lachnospiraceae/Genus_[Ruminococcus] gnavus group
+182	28T1	OB	n185	0.0853087586295591	Family_Lachnospiraceae/Genus_[Ruminococcus] gnavus group
+183	33T1	OB	n185	-1.61150657225882	Family_Lachnospiraceae/Genus_[Ruminococcus] gnavus group
+184	37T1	OB	n185	-0.138748917402666	Family_Lachnospiraceae/Genus_[Ruminococcus] gnavus group
+185	38T1	OB	n185	0.68096497326223	Family_Lachnospiraceae/Genus_[Ruminococcus] gnavus group
+186	39T1	OB	n185	0.337989736355659	Family_Lachnospiraceae/Genus_[Ruminococcus] gnavus group
+187	40T1	OB	n185	0.46625667794524	Family_Lachnospiraceae/Genus_[Ruminococcus] gnavus group
+188	43T1	OB	n185	0.593782479363645	Family_Lachnospiraceae/Genus_[Ruminococcus] gnavus group
+189	50T1	OB	n185	0.571141585656148	Family_Lachnospiraceae/Genus_[Ruminococcus] gnavus group
+190	51T1	OB	n185	0.758044602406359	Family_Lachnospiraceae/Genus_[Ruminococcus] gnavus group
+191	52T1	OB	n185	-0.0976741403379806	Family_Lachnospiraceae/Genus_[Ruminococcus] gnavus group
+192	53T1	OB	n185	-0.269410279571998	Family_Lachnospiraceae/Genus_[Ruminococcus] gnavus group
+193	54T1	OB	n185	1.14893972613142	Family_Lachnospiraceae/Genus_[Ruminococcus] gnavus group
+194	5T1	OB	n185	0.385668959607538	Family_Lachnospiraceae/Genus_[Ruminococcus] gnavus group
+195	63T1	HWC	n185	0.744138357755804	Family_Lachnospiraceae/Genus_[Ruminococcus] gnavus group
+196	66T1	HWC	n185	0.861302047400147	Family_Lachnospiraceae/Genus_[Ruminococcus] gnavus group
+197	67T1	HWC	n185	1.08214130194313	Family_Lachnospiraceae/Genus_[Ruminococcus] gnavus group
+198	68T1	HWC	n185	-0.449984021373065	Family_Lachnospiraceae/Genus_[Ruminococcus] gnavus group
+199	69T1	HWC	n185	0.81044327568252	Family_Lachnospiraceae/Genus_[Ruminococcus] gnavus group
+200	72T1	HWC	n185	-0.867424309516159	Family_Lachnospiraceae/Genus_[Ruminococcus] gnavus group
+201	73T1	HWC	n185	-0.200231838389318	Family_Lachnospiraceae/Genus_[Ruminococcus] gnavus group
+202	74T1	HWC	n185	-0.363149634176853	Family_Lachnospiraceae/Genus_[Ruminococcus] gnavus group
+203	76T1	HWC	n185	0.722699884550086	Family_Lachnospiraceae/Genus_[Ruminococcus] gnavus group
+204	83T1	HWC	n185	0.634983752863194	Family_Lachnospiraceae/Genus_[Ruminococcus] gnavus group
+205	84T1	HWC	n185	0.741046507795033	Family_Lachnospiraceae/Genus_[Ruminococcus] gnavus group
+206	85T1	OB	n185	0.000501904052314624	Family_Lachnospiraceae/Genus_[Ruminococcus] gnavus group
+207	88T1	HWC	n185	-0.37405267841532	Family_Lachnospiraceae/Genus_[Ruminococcus] gnavus group
+208	89T1	HWC	n185	0.000834484270247675	Family_Lachnospiraceae/Genus_[Ruminococcus] gnavus group
+209	90T1	HWC	n185	0.52591059784291	Family_Lachnospiraceae/Genus_[Ruminococcus] gnavus group
+210	91T1	OB	n185	0.696568862106523	Family_Lachnospiraceae/Genus_[Ruminococcus] gnavus group
+211	92T1	HWC	n185	0.930622960641108	Family_Lachnospiraceae/Genus_[Ruminococcus] gnavus group
+212	93T1	HWC	n185	1.01981710402046	Family_Lachnospiraceae/Genus_[Ruminococcus] gnavus group
+213	94T1	HWC	n185	1.09349774240408	Family_Lachnospiraceae/Genus_[Ruminococcus] gnavus group
+214	97T1	HWC	n185	0.722699884550086	Family_Lachnospiraceae/Genus_[Ruminococcus] gnavus group
+215	98T1	HWC	n185	0.918899581972849	Family_Lachnospiraceae/Genus_[Ruminococcus] gnavus group
+216	9T1	OB	n185	0.765631183570279	Family_Lachnospiraceae/Genus_[Ruminococcus] gnavus group
+217	101T1	HWC	n214	-0.170416117224283	Genus_Ruminococcaceae UCG-005/Species_human gut metagenome
+218	104T1	HWC	n214	-0.0148740692932869	Genus_Ruminococcaceae UCG-005/Species_human gut metagenome
+219	106T1	HWC	n214	0.474593577288157	Genus_Ruminococcaceae UCG-005/Species_human gut metagenome
+220	107T1	HWC	n214	0.35110761274574	Genus_Ruminococcaceae UCG-005/Species_human gut metagenome
+221	109T1	HWC	n214	-0.170416117224283	Genus_Ruminococcaceae UCG-005/Species_human gut metagenome
+222	111T1	HWC	n214	-0.170416117224283	Genus_Ruminococcaceae UCG-005/Species_human gut metagenome
+223	116T1	HWC	n214	0.63355115832461	Genus_Ruminococcaceae UCG-005/Species_human gut metagenome
+224	11T1	OB	n214	0.770339859216439	Genus_Ruminococcaceae UCG-005/Species_human gut metagenome
+225	120T1	HWC	n214	0.555704073526534	Genus_Ruminococcaceae UCG-005/Species_human gut metagenome
+226	127T1	HWC	n214	-0.170416117224283	Genus_Ruminococcaceae UCG-005/Species_human gut metagenome
+227	134T1	HWC	n214	0.547372442901558	Genus_Ruminococcaceae UCG-005/Species_human gut metagenome
+228	13T1	OB	n214	-0.112062542067105	Genus_Ruminococcaceae UCG-005/Species_human gut metagenome
+229	16T1	OB	n214	-0.146258981245377	Genus_Ruminococcaceae UCG-005/Species_human gut metagenome
+230	1T1	OB	n214	-0.170416117224283	Genus_Ruminococcaceae UCG-005/Species_human gut metagenome
+231	21T1	OB	n214	-0.170416117224283	Genus_Ruminococcaceae UCG-005/Species_human gut metagenome
+232	22T1	OB	n214	-0.0969484238732348	Genus_Ruminococcaceae UCG-005/Species_human gut metagenome
+233	23T1	OB	n214	-0.170416117224283	Genus_Ruminococcaceae UCG-005/Species_human gut metagenome
+234	24T1	OB	n214	-0.170416117224283	Genus_Ruminococcaceae UCG-005/Species_human gut metagenome
+235	27T1	OB	n214	-0.170416117224283	Genus_Ruminococcaceae UCG-005/Species_human gut metagenome
+236	28T1	OB	n214	-0.195908712613419	Genus_Ruminococcaceae UCG-005/Species_human gut metagenome
+237	33T1	OB	n214	-0.170416117224283	Genus_Ruminococcaceae UCG-005/Species_human gut metagenome
+238	37T1	OB	n214	-0.170416117224283	Genus_Ruminococcaceae UCG-005/Species_human gut metagenome
+239	38T1	OB	n214	-0.659718098820415	Genus_Ruminococcaceae UCG-005/Species_human gut metagenome
+240	39T1	OB	n214	0.501753901498014	Genus_Ruminococcaceae UCG-005/Species_human gut metagenome
+241	40T1	OB	n214	0.601175526018318	Genus_Ruminococcaceae UCG-005/Species_human gut metagenome
+242	43T1	OB	n214	-0.170416117224283	Genus_Ruminococcaceae UCG-005/Species_human gut metagenome
+243	50T1	OB	n214	0.645912608166855	Genus_Ruminococcaceae UCG-005/Species_human gut metagenome
+244	51T1	OB	n214	-0.170416117224283	Genus_Ruminococcaceae UCG-005/Species_human gut metagenome
+245	52T1	OB	n214	0.300149733403737	Genus_Ruminococcaceae UCG-005/Species_human gut metagenome
+246	53T1	OB	n214	-0.170416117224283	Genus_Ruminococcaceae UCG-005/Species_human gut metagenome
+247	54T1	OB	n214	-0.170416117224283	Genus_Ruminococcaceae UCG-005/Species_human gut metagenome
+248	5T1	OB	n214	-0.170416117224283	Genus_Ruminococcaceae UCG-005/Species_human gut metagenome
+249	63T1	HWC	n214	0.637106108718818	Genus_Ruminococcaceae UCG-005/Species_human gut metagenome
+250	66T1	HWC	n214	-0.170416117224283	Genus_Ruminococcaceae UCG-005/Species_human gut metagenome
+251	67T1	HWC	n214	0.594416320495719	Genus_Ruminococcaceae UCG-005/Species_human gut metagenome
+252	68T1	HWC	n214	-0.170416117224283	Genus_Ruminococcaceae UCG-005/Species_human gut metagenome
+253	69T1	HWC	n214	0.24703935992728	Genus_Ruminococcaceae UCG-005/Species_human gut metagenome
+254	72T1	HWC	n214	0.546365960200322	Genus_Ruminococcaceae UCG-005/Species_human gut metagenome
+255	73T1	HWC	n214	-0.170416117224283	Genus_Ruminococcaceae UCG-005/Species_human gut metagenome
+256	74T1	HWC	n214	0.472923851371924	Genus_Ruminococcaceae UCG-005/Species_human gut metagenome
+257	76T1	HWC	n214	-0.170416117224283	Genus_Ruminococcaceae UCG-005/Species_human gut metagenome
+258	83T1	HWC	n214	-0.170416117224283	Genus_Ruminococcaceae UCG-005/Species_human gut metagenome
+259	84T1	HWC	n214	-0.272993930961507	Genus_Ruminococcaceae UCG-005/Species_human gut metagenome
+260	85T1	OB	n214	-0.170416117224283	Genus_Ruminococcaceae UCG-005/Species_human gut metagenome
+261	88T1	HWC	n214	0.269303293770643	Genus_Ruminococcaceae UCG-005/Species_human gut metagenome
+262	89T1	HWC	n214	0.188478162838637	Genus_Ruminococcaceae UCG-005/Species_human gut metagenome
+263	90T1	HWC	n214	0.708572677905049	Genus_Ruminococcaceae UCG-005/Species_human gut metagenome
+264	91T1	OB	n214	-0.170416117224283	Genus_Ruminococcaceae UCG-005/Species_human gut metagenome
+265	92T1	HWC	n214	0.72512145809326	Genus_Ruminococcaceae UCG-005/Species_human gut metagenome
+266	93T1	HWC	n214	0.168373921621698	Genus_Ruminococcaceae UCG-005/Species_human gut metagenome
+267	94T1	HWC	n214	0.430250048724272	Genus_Ruminococcaceae UCG-005/Species_human gut metagenome
+268	97T1	HWC	n214	-0.170416117224283	Genus_Ruminococcaceae UCG-005/Species_human gut metagenome
+269	98T1	HWC	n214	-0.170416117224283	Genus_Ruminococcaceae UCG-005/Species_human gut metagenome
+270	9T1	OB	n214	-1.08539269958423	Genus_Ruminococcaceae UCG-005/Species_human gut metagenome

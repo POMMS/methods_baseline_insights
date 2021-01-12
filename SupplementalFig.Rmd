@@ -1,0 +1,338 @@
+---
+title: "R24 Interim analysis"
+output: html_notebook
+---
+
+```{r, echo=FALSE}
+#Load packages. You may be asked to update the package 'rlang'
+library(ggplot2)
+library(tidyverse)
+library(phyloseq)
+library(vegan)
+library(RColorBrewer)
+library(patchwork)
+library(ggsignif)
+library(gridExtra)
+```
+
+
+```{r}
+#Load phyloseq object and print it to verify that it was correctly read
+ps2 <- read_rds("/Users/jay/Box Sync/R24 16S analysis files/FW__R24_ASV_&_mapping_table/jj_r24_exp_v4tree_noOutliersV3_34T1Added.rds")
+ps2
+```
+
+```{r}
+#Changing variable names for publication
+levels(sample_data(ps2)[["Health"]]) <- c("HWC","OB")
+ps2
+```
+
+
+
+Making a plot to show all OTUs on the same scale, pruned for quality
+
+```{r}
+#Prune samples that have a total read sum of less than 50
+
+min_count = 50
+
+ps2 %>%
+  prune_samples(sample_sums(.)>=min_count, .) ->
+  r24_baseline_prune
+
+sample_sums(r24_baseline_prune) %>% sort
+
+```
+
+```{r}
+#Only including taxa that have at least 3 reads in at least 10% of samples
+
+min_count = 3
+min_sample_frac = 0.10
+
+prune.vec = filter_taxa(r24_baseline_prune, 
+                       function(x) sum(x >= min_count) >= (min_sample_frac*length(x)))
+r24_baseline.st_prune = prune_taxa(prune.vec, r24_baseline_prune)
+ntaxa(r24_baseline.st_prune)
+
+```
+
+```{r}
+#Making the dataset "r24_baseline_prune.even" to convert the proportions back into whole numbers (Makes it easier to compare between samples)
+
+r24_baseline_prune.even = transform_sample_counts(r24_baseline.st_prune, function(x) 1E6 * x/sum(x))
+```
+
+```{r}
+#Plotting even object, sorting by Health
+Pruned_Family_by_Health <- plot_bar(r24_baseline_prune.even, x = "Patient", fill = "Family") +
+  geom_bar(stat = "identity", position = "stack", size=0) +
+  facet_wrap(~Health, scales="free_x")
+Pruned_Family_by_Health
+```
+
+
+
+```{r}
+#Transforming ps2 into percentage before pruning
+ps2_pct = transform_sample_counts(ps2, function(x) 1E2 * x/sum(x))
+```
+
+```{r}
+#Pruning transformed ps2 to remove rare taxa to make the legend more readable
+
+#Prune samples that have a total read sum of less than 50
+
+min_count = 50
+
+ps2_pct %>%
+  prune_samples(sample_sums(.)>=min_count, .) ->
+  ps2_pct_prune
+
+sample_sums(ps2_pct_prune) %>% sort
+
+```
+
+```{r}
+#Only including taxa that have at least 3 reads in at least 10% of samples
+
+min_count = 0.01
+min_sample_frac = 0.10
+
+prune.vec = filter_taxa(ps2_pct_prune, 
+                       function(x) sum(x >= min_count) >= (min_sample_frac*length(x)))
+ps2_pct_prune_minreads = prune_taxa(prune.vec, ps2_pct_prune)
+ntaxa(ps2_pct_prune_minreads)
+
+```
+
+
+
+```{r}
+#Making the graph without the trimmed data, to say ASV instead of OTU, and with the Y axis as percentage
+Pruned_Family_by_Health31 <- plot_bar(ps2_pct, x = "Patient", fill = "Family") +
+  geom_bar(stat = "identity", position = "stack", size=0)  + scale_fill_manual(values = col_vector) + facet_wrap(~Health, scales="free_x") +
+  theme(legend.position="bottom") +
+  guides(fill=guide_legend(nrow=7))
+
+g7 <- Pruned_Family_by_Health31 + plot_annotation(title = 'Pruned ASVs, sorted by Health') + ylab("Percentage")
+  
+g7
+```
+
+```{r}
+#Making the graph without the trimmed data, to say ASV instead of OTU, and with the Y axis as percentage
+#This one has a different color palette, see this link for source (https://github.com/joey711/phyloseq/issues/901)
+Pruned_Family_by_Health32 <- plot_bar(ps2_pct, x = "Patient", fill = "Family") +
+  geom_bar(stat = "identity", position = "stack", size=0)  + scale_fill_manual(values = c("darkblue", "darkgoldenrod1", "darkseagreen", "darkorchid", "darkolivegreen1", "lightskyblue", "darkgreen", "deeppink", "khaki2", "firebrick", "brown1", "darkorange1", "cyan1", "royalblue4", "darksalmon", "darkblue", "royalblue4", "dodgerblue3", "steelblue1", "lightskyblue", "darkseagreen", "darkgoldenrod1", "darkseagreen", "darkorchid", "darkolivegreen1", "brown1", "darkorange1", "cyan1", "darkgrey", "darkblue", "darkgoldenrod1", "darkseagreen", "darkorchid", "darkolivegreen1", "lightskyblue", "darkgreen", "deeppink", "khaki2", "firebrick", "brown1", "darkorange1", "cyan1", "royalblue4", "darksalmon", "darkblue", "royalblue4", "dodgerblue3", "steelblue1", "lightskyblue", "darkseagreen", "darkgoldenrod1", "darkseagreen", "darkorchid", "darkolivegreen1", "brown1", "darkorange1", "cyan1", "darkgrey", "rosybrown4", "darkmagenta", "aquamarine4")) +
+theme(legend.position="bottom") + guides(fill=guide_legend(nrow=5)) + facet_wrap(~Health, scales="free_x") +
+  theme(legend.position="bottom") +
+  guides(fill=guide_legend(nrow=7))
+
+g71 <- Pruned_Family_by_Health32 + plot_annotation(title = 'Pruned ASVs, sorted by Health') + ylab("Percentage")
+  
+g71
+```
+
+```{r}
+#Making the graph without the trimmed data, to say ASV instead of OTU, and with the Y axis as percentage
+#This is the final version of this plot
+Pruned_Family_by_Health32 <- plot_bar(ps2_pct, x = "Patient", fill = "Family") +
+  geom_bar(stat = "identity", position = "stack", size=0)  + scale_fill_manual(values = c("burlywood4", "darkgoldenrod1", "darkseagreen", "darkorchid", "darkolivegreen1", "lightskyblue", "darkgreen", "deeppink", "khaki2", "firebrick", "brown1", "darkorange1", "cyan1", "royalblue4", "darksalmon", "darkblue", "limegreen", "dodgerblue3", "tan4", "lightslateblue", "darkseagreen", "darkgoldenrod1", "darkseagreen", "ivory4", "darkolivegreen1", "brown1", "darkorange1", "olivedrab", "darkgrey", "darkblue", "darkgoldenrod4", "darkseagreen", "darkorchid", "darkolivegreen1", "lightskyblue", "darkgreen", "deeppink", "khaki2", "springgreen4", "magenta", "thistle", "slategray2", "royalblue4", "darksalmon", "red2", "khaki4", "slategray2", "plum", "navajowhite3", "sienna2", "darkgoldenrod3", "darkseagreen", "darkorchid", "darkolivegreen1", "brown1", "darkorange1", "cyan1", "darkgrey", "rosybrown4", "darkmagenta", "aquamarine4")) +
+theme(legend.position="bottom") + guides(fill=guide_legend(nrow=5)) + facet_wrap(~Health, scales="free_x") +
+  theme(legend.position="bottom") +
+  guides(fill=guide_legend(ncol=5))
+
+g71 <- Pruned_Family_by_Health32 + ylab("Percentage")
+  
+g71
+```
+
+```{r}
+Pruned_Family_by_Health31 <- plot_bar(ps2_pct_prune_minreads, x = "Patient", fill = "Family") +
+  geom_bar(stat = "identity", position = "stack", size=0)  + scale_fill_manual(values = col_vector) + facet_wrap(~Health, scales="free_x") +
+  theme(legend.position="bottom") +
+  guides(fill=guide_legend(nrow=7))
+
+g7 <- Pruned_Family_by_Health31 + plot_annotation(title = 'All OTUs, sorted by Health', subtitle = 'Samples were filtered to include only those that had at least 3 reads in at least 10% of samples, and a total read sum > 50')
+  
+g7
+```
+
+
+Re-doing boxplots for Alpha and Beta diversity:
+Excluded the grey background that is the default for ggplot2
+Changed the colors of OB and HWC to match the color scheme in Pat's LefSe analysis
+
+```{r}
+#Using Phyloseq and ggplot2 to compare diversity between Health groups (i.e. healthy vs overweight)
+#The vector containing diversity metrics can be modified as needed. Here we need only the Shannon diversity index
+#This looks good when saved as 4x4
+alpha_measures_all <- c("Shannon")
+ga1 <- plot_richness(ps2, measures = alpha_measures_all, x ="Health", color = "Health")
+ga2 <- ga1 + geom_boxplot(data = ga1$data, aes(x = Health, y = value, color = NULL), alpha = 0.1) + scale_color_brewer(palette = "Set1") + geom_signif(comparisons = list(c("HWC", "OB")), map_signif_level=TRUE)
+
+ga2.1 <- ga2 + geom_jitter(width = 0.3) + theme_minimal()
+ga2.1
+```
+
+We need to add Kruskal-Wallis statistics to this graph. The GridExtra package is good for this.
+
+```{r}
+#Printing alpha beta diversity metrics with a Kruskal wallis test
+erich <- estimate_richness(ps2, measures = c("Shannon"))
+ttest2 <- t(sapply(erich, function(x) unlist(kruskal.test(x~sample_data(ps2)$Health)[c("estimate","p.value","statistic","conf.int")])))
+
+grid.table(ttest2)
+```
+
+
+Kim's script for Beta Diversity comparisons
+
+```{r}
+# normalize counts
+jj_r24_even <- rarefy_even_depth(ps2, sample.size=min(sample_sums(ps2)), rngseed=1001, trimOTUs=FALSE)
+jj_r24_even <- ps2
+
+HWC_samples <- subset_samples(jj_r24_even, Health=="HWC")
+OB_samples <- subset_samples(jj_r24_even, Health=="OB")
+
+# get counts
+HWC_counts <- otu_table(HWC_samples)@.Data
+no_HWC <- ncol(HWC_counts)
+OB_counts <- otu_table(OB_samples)@.Data
+no_OB <- ncol(OB_counts)
+all_counts <- cbind(HWC_counts, OB_counts)
+
+# note: vegdist assumes samples to compare are listed as rows in this matrix
+HWC_within <- vegdist(t(HWC_counts), method="bray", upper=TRUE)
+OB_within <- vegdist(t(OBS_counts), method="bray", upper=TRUE)
+all_between <- vegdist(t(all_counts), method="bray", upper=TRUE)
+HWC_OB_between <- as.matrix(vegdist(t(all_counts), method="bray", upper=TRUE))[1:no_HWC,(no_HWC+1):(no_HWC+no_OBS)]
+
+df <- data.frame(value=c(HWC_within), group="HWC x HWC")
+df <- rbind(df, data.frame(value=c(OB_within), group="OB x OB"))
+df <- rbind(df, data.frame(value=c(HWC_OB_between), group="HWC x OB"))
+
+p3 <- ggplot(df) +
+  geom_boxplot(aes(x=group, y=value, fill=group)) +
+  scale_color_brewer(palette="Set1") +
+  xlab("") +
+  ylab("") +
+  theme(legend.position="none")
+p3
+
+# test significance of BC dissimilarities
+cohorts <- c(rep("HWC", no_HWC), rep("OB", no_OB))
+res <- vegan::adonis(all_between ~ cohorts)
+R2 <- res$aov.tab$R2
+Pval <- res$aov.tab$`Pr(>F)`
+cat("PERMANOVA R2 / p-val:",R2[1],"/",Pval[1],"\n")
+
+
+
+```
+
+Let's add a title and remove the grey ggplot background
+
+```{r}
+
+p4 <- p3 + ggtitle("Bray-Curtis Dissimilarity comparisons") +
+  theme(plot.title = element_text(hjust = 0.5)) + theme_minimal()
+
+p4
+```
+
+```{r}
+#Using Bray-Curtis dissimilarity with NMDS for ordination
+#Uses the pruned dataset generated earlier
+#The seed is set at 1 since NMDS can give slightly results each time
+set.seed(1)
+r24_baseline_prune.even.nmds_bc <- ordinate(r24_baseline_prune.even, "NMDS", "bray")
+```
+
+
+```{r}
+#Checking if NMDS converged
+cat("Converged?", r24_baseline_prune.even.nmds_bc$converged, fill=TRUE)
+
+```
+
+```{r}
+#Checking NMDS stress, this gives the same stress as before which is good
+cat("Stress:", r24_baseline_prune.even.nmds_bc$stress, fill=TRUE)
+
+```
+
+###A stress of 0.1-0.2 is good/acceptable. A stress < 0.1 is great
+
+```{r}
+## NMDS Scree Plot
+#Writing a function to pull stress values from NMDS results for plotting
+
+mds_stress_dplyr = function(df,rep_num, dimensions) {
+  mds_result = metaMDS(df, autotransform=TRUE, k=dimensions)
+  return(mds_result$stress)
+}
+
+```
+
+```{r}
+set.seed(1)
+scree.df = expand.grid(repnum=seq(1), dimensions=seq(6)) %>% 
+  rowwise() %>% 
+  mutate(stress = mds_stress_dplyr(otu_table(r24_baseline_prune.even), repnum, dimensions))
+```
+
+```{r}
+#NMDS plots data using the smallest number of dimensions
+ggplot(data = scree.df, aes(x = dimensions, y = stress)) +
+  geom_jitter(width = 0.05, alpha=1/3) +
+  stat_summary(fun.y=mean, geom="line") +
+theme_bw()
+```
+
+```{r}
+#Plotting the results of NMDS, where each datapoint represents a sample
+#This also includes the stress and convergence on the plot
+g6 <- plot_ordination(r24_baseline_prune.even, 
+                r24_baseline_prune.even.nmds_bc, 
+                type="samples", color="Health") +
+  scale_color_brewer(palette = "Set1") +
+  annotate("text",x=-Inf,y=-Inf,hjust=-0.01,vjust=-0.1,
+           label= paste("Stress:", r24_baseline_prune.even.nmds_bc$stress, 
+                        "\nConverged:", r24_baseline_prune.even.nmds_bc$converged)) + 
+  stat_ellipse(type = "norm")
+g6
+```
+
+```{r}
+#Plotting the results of NMDS, where each datapoint represents a sample
+#This also includes the stress and convergence on the plot
+g6.1 <- plot_ordination(r24_baseline_prune.even, 
+                r24_baseline_prune.even.nmds_bc, 
+                type="samples", color="Health", shape = "Gender") +
+  scale_color_brewer(palette = "Set1") +
+  annotate("text",x=-Inf,y=-Inf,hjust=-0.01,vjust=-0.1,
+           label= paste("Stress:", r24_baseline_prune.even.nmds_bc$stress, 
+                        "\nConverged:", r24_baseline_prune.even.nmds_bc$converged)) + 
+  stat_ellipse(type = "norm")
+g6.1
+```
+
+```{r}
+#Adding 95% confidence ellipses to ordination plots
+
+g7 <- plot_ordination(r24_baseline_prune.even, r24_baseline_prune.even.nmds_bc, type="samples", color="Health") + 
+  stat_ellipse(type = "norm") +
+  scale_color_brewer(palette = "Dark2") +
+  theme_bw()
+g7
+```
+
+```{r}
+#Always provide session info!
+sessionInfo()
+```
+

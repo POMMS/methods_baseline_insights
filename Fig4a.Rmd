@@ -1,0 +1,99 @@
+---
+title: "Bray-Curtis beta diversity comparisons"
+output: html_notebook
+---
+
+```{r}
+library(phyloseq)
+library(vegan)
+library(ggplot2)
+```
+
+```{r}
+jj_r24 <- readRDS("/Users/jay/Box Sync/R24 16S analysis files/FW__R24_ASV_&_mapping_table/jj_r24_exp_v4tree_noOutliersV3_34T1Added.rds")
+jj_r24
+```
+
+```{r}
+# normalize counts
+jj_r24_even <- rarefy_even_depth(jj_r24, sample.size=min(sample_sums(jj_r24)), rngseed=1001, trimOTUs=FALSE)
+jj_r24_even <- jj_r24
+
+HWC_samples <- subset_samples(jj_r24_even, Health=="HWC")
+OBS_samples <- subset_samples(jj_r24_even, Health=="OBS")
+
+# get counts
+HWC_counts <- otu_table(HWC_samples)@.Data
+no_HWC <- ncol(HWC_counts)
+OBS_counts <- otu_table(OBS_samples)@.Data
+no_OBS <- ncol(OBS_counts)
+all_counts <- cbind(HWC_counts, OBS_counts)
+
+# note: vegdist assumes samples to compare are listed as rows in this matrix
+HWC_within <- vegdist(t(HWC_counts), method="bray", upper=TRUE)
+OBS_within <- vegdist(t(OBS_counts), method="bray", upper=TRUE)
+all_between <- vegdist(t(all_counts), method="bray", upper=TRUE)
+HWC_OBS_between <- as.matrix(vegdist(t(all_counts), method="bray", upper=TRUE))[1:no_HWC,(no_HWC+1):(no_HWC+no_OBS)]
+
+df <- data.frame(value=c(HWC_within), group="HWC x HWC")
+df <- rbind(df, data.frame(value=c(OBS_within), group="OBS x OBS"))
+df <- rbind(df, data.frame(value=c(HWC_OBS_between), group="HWC x OBS"))
+
+p3 <- ggplot(df) +
+  geom_boxplot(aes(x=group, y=value, fill=group)) +
+  scale_color_brewer(palette="Dark2") +
+  xlab("") +
+  ylab("") +
+  theme(legend.position="none")
+p3
+
+# test significance of BC dissimilarities
+cohorts <- c(rep("HWC", no_HWC), rep("OBS", no_OBS))
+res <- vegan::adonis(all_between ~ cohorts)
+R2 <- res$aov.tab$R2
+Pval <- res$aov.tab$`Pr(>F)`
+cat("PERMANOVA R2 / p-val:",R2[1],"/",Pval[1],"\n")
+
+
+
+
+
+
+```
+
+```{r}
+print(p3 + ggtitle("Bray-Curtis Dissimilarity comparisons")) +
+  theme(plot.title = element_text(hjust = 0.5))
+```
+
+
+```{r}
+# test significance of BC dissimilarities
+cohorts <- c(rep("HWC", no_HWC), rep("OBS", no_OBS))
+res <- vegan::adonis(all_between ~ cohorts)
+R2 <- res$aov.tab$R2
+Pval <- res$aov.tab$`Pr(>F)`
+cat("PERMANOVA R2 / p-val:",R2[1],"/",Pval[1],"\n")
+```
+
+```{r}
+library(gridExtra)
+```
+
+```{r}
+df <- cat("PERMANOVA R2 / p-val:",R2[1],"/",Pval[1],"\n")
+df
+```
+
+```{r}
+#Creating data frame for outputting
+x <- data.frame("PERMANOVA R2:" = R2[1], "p-val" = Pval[1])
+x
+```
+
+
+```{r}
+pdf("PERMANOVA-results.pdf", height=5, width=5 )
+grid.table(x)
+dev.off()
+```
